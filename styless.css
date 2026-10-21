@@ -144,55 +144,48 @@ main{
     
 }
 
-/* الأكواد المكتوبة هنا هتشتغل فقط على الشاشات اللي عرضها أصغر من 768 بكسل (الموبايلات) */
 @media (max-width: 768px) {
-    
-    /* 1. تعديل قسم الـ Hero ليصبح بالطول */
-    .hero {
-        flex-direction: column-reverse; /* يخلي الصورة تنزل تحت أو الكلام فوق بشكل منسق */
-        text-align: center;            /* يخلي الكلام في النص ومريح للعين على الموبايل */
-        padding: 20px;                 /* تقليل المسافات الداخلية الكبيرة */
-    }
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px;
+  }
 
-    /* يجعل النصوص تأخذ العرض الكامل للموبايل */
-    .hero-text {
-        max-width: 100%;
-        margin-top: 20px;              /* مسافة بين الصورة والكلام */
-    }
+  .hero-text {
+    max-width: 100%;
+  }
 
-    /* يجعل الصورة في المنتصف وتأخذ حجم مناسب */
-    .hero-image {
-        justify-content: center;       /* يوسط الصورة بدلاً من أقصى اليمين */
-        width: 100%;
-    }
+  .hero-image {
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
 
-    .hero-image img {
-        max-width: 80%;                /* صغّرنا حجم الصورة شوية عشان متملاش الشاشة كلها */
-        height: auto;
-    }
+  .hero-image img {
+    max-width: 80%;
+    height: auto;
+  }
 
-    /* 2. تعديل الهيدر والقائمة عشان متزنقش */
-    header {
-        flex-direction: column;        /* يخلي اللوجو وتحته روابط التنقل */
-        gap: 15px;
-        padding: 15px;
-    }
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
 
-    header nav {
-        justify-content: center;       /* يوسط الروابط (Home, Menu, Contact) */
-        width: 100%;
-    }
+  header nav {
+    justify-content: center;
+    width: 100%;
+  }
 
-    .menu-items {
-        flex-direction: column;   /* يجعل الكروت تنزل تحت بعضها بدل ما هي جنب بعض */
-        align-items: center;      /* يوسط الكروت تماماً في منتصف شاشة الموبايل */
-        width: 100%;
-        overflow-x: hidden;       /* يمنع الشاشة تتحرك يمين وشمال نهائياً */
-    }
+  .menu-items {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+  }
 
-    .card {
-        width: 90%;               /* يخلي الكارت ياخد مساحة مناسبة من عرض الموبايل */
-        max-width: 300px;         /* يضمن إن الكارت ميبقاش عريض بزيادة في الشاشات الأكبر شوية */
-    }
-
+  .card {
+    width: 90%;
+    max-width: 300px;
+  }
 }
