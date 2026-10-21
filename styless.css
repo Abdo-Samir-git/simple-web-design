@@ -143,3 +143,43 @@ main{
     align-items: center;
     
 }
+
+/* الأكواد المكتوبة هنا هتشتغل فقط على الشاشات اللي عرضها أصغر من 768 بكسل (الموبايلات) */
+@media (max-width: 768px) {
+    
+    /* 1. تعديل قسم الـ Hero ليصبح بالطول */
+    .hero {
+        flex-direction: column-reverse; /* يخلي الصورة تنزل تحت أو الكلام فوق بشكل منسق */
+        text-align: center;            /* يخلي الكلام في النص ومريح للعين على الموبايل */
+        padding: 20px;                 /* تقليل المسافات الداخلية الكبيرة */
+    }
+
+    /* يجعل النصوص تأخذ العرض الكامل للموبايل */
+    .hero-text {
+        max-width: 100%;
+        margin-top: 20px;              /* مسافة بين الصورة والكلام */
+    }
+
+    /* يجعل الصورة في المنتصف وتأخذ حجم مناسب */
+    .hero-image {
+        justify-content: center;       /* يوسط الصورة بدلاً من أقصى اليمين */
+        width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 80%;                /* صغّرنا حجم الصورة شوية عشان متملاش الشاشة كلها */
+        height: auto;
+    }
+
+    /* 2. تعديل الهيدر والقائمة عشان متزنقش */
+    header {
+        flex-direction: column;        /* يخلي اللوجو وتحته روابط التنقل */
+        gap: 15px;
+        padding: 15px;
+    }
+
+    header nav {
+        justify-content: center;       /* يوسط الروابط (Home, Menu, Contact) */
+        width: 100%;
+    }
+}
